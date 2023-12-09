@@ -1,0 +1,112 @@
+body {
+    background: url(assets/images/beach.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+h3 {
+    font-family: cursive;
+    font-size: 45px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#descriptionBox {
+    height: 100px;
+    width: 250px;
+}
+
+form {
+    background: url(assets/images/paperForm.jpg) repeat center/100%;
+    margin: 15px;
+    border: 1px solid;
+    padding: 50px;
+    display: inline-block;
+}
+
+.task {
+    background-image: url(assets/images/stickyNote.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 280px;
+    height: 280px;
+    position: relative;
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    animation: fadeInAnimation 2s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+.stickyImg {
+    width: 125%;
+    height: 125%;
+}
+
+.stickyNoteTitle {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    top: 15%;
+    left: 14%;
+    font-size: 20px;
+}
+
+
+.stickyNoteText {
+    position: absolute;
+    height: 150px;
+    width: 200px;
+    top: 30%;
+    right: 20%;
+    overflow: auto;
+}
+
+.stickyNoteDate {
+    position: absolute;
+    height: 3px;
+    width: 10px;
+    bottom: 15%;
+    left: 5%;
+    color: turquoise;
+}
+
+
+.remove {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 35px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.task .remove .glyphicon-remove {
+    color: deepskyblue;
+    position: relative;
+    width: 60px;
+    height: 33px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 20px;
+}
+
+
+.task:hover > .remove > .glyphicon-remove {
+    opacity: 1;
+    display: block;
+}
